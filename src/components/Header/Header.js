@@ -73,7 +73,7 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: clamp(1rem, 9.2vw - 4.5rem , 3.5rem);
+  gap: clamp(1rem, 9.2vw - 4.5rem , 3rem);
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndBelow} {
@@ -111,7 +111,7 @@ const Filler = styled.div`
 `
 
 const NavLink = styled.a`
-  font-size: 1.125rem;
+  font-size: calc(18 / 16 * 1rem);
   text-transform: uppercase;
   text-decoration: none;
   color: VAR(--color-gray-900);
