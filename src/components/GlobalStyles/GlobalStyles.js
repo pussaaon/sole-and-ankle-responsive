@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components/macro';
+import { COLORS } from '../../constants';
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
-   License: none (public domain)
+   License: none public domain
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,13 +61,23 @@ table {
 #root {
   /*
     Create a stacking context, without a z-index.
-    This ensures that all portal content (modals and tooltips) will
+    This ensures that all portal content modals and tooltips will
     float above the app.
   */
   isolation: isolate;
 }
 
 html {
+  --color-white: ${COLORS.white};
+  --color-primary: ${COLORS.primary};
+  --color-secondary: ${COLORS.secondary};
+  --color-grey-100: ${COLORS.gray[100]};
+  --color-grey-300: ${COLORS.gray[300]};
+  --color-grey-500: ${COLORS.gray[500]};
+  --color-grey-700: ${COLORS.gray[700]};
+  --color-grey-900: ${COLORS.gray[900]};
+
+  --color-backdrop: ${COLORS.gray[700]} / 0.8;
   /*
     Silence the warning about missing Reach Dialog styles
   */
